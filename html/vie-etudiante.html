@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vie Étudiante & Campus – Efrei</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #0a1a3a, #020611 70%);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-container img {
+      height: 80px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .logo-container a {
+      display: inline-block;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    header .subtitle {
+      font-size: 12px;
+      opacity: 0.7;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #5bbdff;
+    }
+
+    /* PAGE TITLE */
+    .page-hero {
+      padding: 80px 80px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      background: linear-gradient(135deg, #3fa4ff, #176bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .campus-image {
+      margin-top: 50px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0, 150, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .campus-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* NOS ENGAGEMENTS */
+    .engagements {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 40px auto 0;
+    }
+
+    .engagement-card {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.08);
+      text-align: left;
+    }
+
+    .engagement-card h3 {
+      color: #5bbdff;
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .engagement-card p {
+      opacity: 0.9;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .engagement-card .icon {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    /* SECTION GENERAL STYLES */
+    section {
+      padding: 80px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    section h2 {
+      font-size: 40px;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    /* INSTALLATIONS ET MOYENS */
+    .installations {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .installation-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    }
+
+    .installation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.25);
+    }
+
+    .installation-card h3 {
+      font-size: 24px;
+      margin: 0 0 15px 0;
+      color: #5bbdff;
+    }
+
+    .installation-card p {
+      opacity: 0.85;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* CLUBS ET ASSOCIATIONS */
+    .clubs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .club-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    }
+
+    .club-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.25);
+    }
+
+    .club-card .icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    .club-card img.icon {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-desc {
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      font-size: 16px;
+      opacity: 0.88;
+      line-height: 1.6;
+    }
+
+    .club-card h3 {
+      font-size: 22px;
+      margin: 0 0 10px 0;
+    }
+
+    .club-card p {
+      opacity: 0.8;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* TÉMOIGNAGES */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    }
+
+    .testimonial-card .quote {
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #5bbdff;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .testimonial-card .role {
+      opacity: 0.7;
+      font-size: 14px;
+    }
+
+    /* PROJETS ÉTUDIANTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.25);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(63, 164, 255, 0.2), rgba(23, 107, 255, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    .project-info {
+      padding: 25px;
+    }
+
+    .project-info h3 {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+    }
+
+    .project-info p {
+      opacity: 0.8;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* PARTENARIATS */
+    .partnerships {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .partner-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    }
+
+    .partner-card:hover {
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.25);
+    }
+
+    .partner-card h3 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+
+    .partner-card p {
+      opacity: 0.8;
+      margin: 0;
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background-image: url('https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top center;
+      min-height: 420px;
+      padding: 80px 20px 40px 20px;
+      color: white;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(2,6,20,0.6);
+      pointer-events: none;
+    }
+
+    .site-footer .footer-inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+
+    .site-footer .col {
+      flex: 1 1 220px;
+    }
+
+    .site-footer h4 {
+      margin: 0 0 12px 0;
+      color: #5bbdff;
+    }
+
+    .site-footer p, .site-footer a {
+      color: #dfeefe;
+      opacity: 0.95;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .site-footer .footer-bottom {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .installations, .clubs-grid, .testimonials, .projects-grid, .partnerships {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+
+      section {
+        padding: 40px;
+      }
+
+      .page-hero {
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html" aria-label="Accueil">
+        <img src="../img/Logo-Generique-1-251113123328.png" alt="Logo Efrei">
+      </a>
+    </div>
+    <nav>
+      <a href="index.html#formations">Formations</a>
+      <a href="index.html#enseignants">Corps Enseignant & Recherche</a>
+      <a href="vie-etudiante.html">Vie Étudiante & Campus</a>
+      <a href="vie-etudiante.html">Partenariats & Professionnalisation</a>
+      <a href="index.html#contact">Contact & Admissions</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Vie Étudiante & Campus</h1>
+    <p>Découvrez la vie dynamique du département informatique d'Efrei et les opportunités qui s'offrent à vous</p>
+    <div class="campus-image">
+      <img src="../img/efrei-batiment-1024x1024.jpg" alt="Campus d'Efrei Villejuif">
+    </div>
+  </section>
+  <!-- NOS ENGAGEMENTS -->
+  <section class="engagements-section">
+    <h2>🤝 Nos engagements</h2>
+    <div class="engagements">
+      <div class="engagement-card">
+        <img class="icon" src="../img/handicap.jpg" alt="Inclusion handicap">
+        <h3>Handicap & social</h3>
+        <p>Nous agissons en faveur de l’inclusion des étudiants en situation de handicap.</p>
+      </div>
+      <div class="engagement-card">
+        <img class="icon" src="../img/logo-EfreiForGood.jpg" alt="Santé et prévention">
+        <h3>Santé et prévention</h3>
+        <p>La prévention, la santé mentale des étudiants et la lutte contre le harcèlement sont notre priorité.</p>
+      </div>
+      <div class="engagement-card">
+        <img class="icon" src="../img/egalite-homme-femme.jpg" alt="Égalité femmes-hommes">
+        <h3>Égalité femmes-hommes</h3>
+        <p>L’Efrei met en œuvre de nombreuses actions pour accélérer la parité dans les métiers du numérique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATIONS ET MOYENS -->
+  <section class="installations-section">
+    <h2>🏛️ Installations et Moyens</h2>
+    <div class="installations">
+      <div class="installation-card">
+        <h3>Laboratoires Informatiques</h3>
+        <p>Des espaces ultramodernes équipés des dernières technologies pour vos projets pratiques, avec accès aux outils professionnels de l'industrie.</p>
+      </div>
+      <div class="installation-card">
+        <h3>Espaces de Coworking</h3>
+        <p>Des zones collaboratives conçues pour favoriser l'échange et le travail en groupe, parfaites pour vos projets de fin d'études.</p>
+      </div>
+      <div class="installation-card">
+        <h3>Plateformes Pédagogiques</h3>
+        <p>Accès illimité à Openclassrooms, LinkedIn Learning et autres ressources pour approfondir vos compétences en continu.</p>
+      </div>
+      <div class="installation-card">
+        <h3>Bibliothèque Numérique</h3>
+        <p>Une collection complète de ressources, tutoriels et documentation pour supporter vos études et projets innovants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLUBS ET ASSOCIATIONS -->
+  <section class="clubs-section">
+    <h2>Vie associative</h2>
+    <p class="section-desc">Découvrir toutes nos associations & clubs étudiants
+    <br>Sport, tech, culture, humanitaire, médias… la vie associative de l’Efrei est riche et variée. Au travers de projets fédérateurs, elle permet à chacun d’exprimer ses talents, de s’ouvrir au monde et à soi‑même.</p>
+    <div class="clubs-grid">
+      
+      <div class="club-card">
+        <img class="icon" src="../img/CTfrei-150x150.png" alt="Logo CTfrei">
+        <h3>CTfrei</h3>
+        <p>CTfrei initie les étudiants aux CTF (Capture The Flag) et à la cybersécurité. Elle participe à des CTF universitaires et forme une équipe pour la compétition InCyber.</p>
+      </div>
+      <div class="club-card">
+        <img class="icon" src="../img/4eSport.png" alt="4eSport">
+        <h3>4eSport</h3>
+        <p>L’association de jeux vidéo réunit de nombreux pôles e-sport. Chacun peut y trouver ou proposer son jeu préféré, avec rencontres et compétitions toute l’année.</p>
+      </div>
+        <div class="club-card">
+          <img class="icon" src="../img/Club-Rezo-300x79.jpg" alt="Club Rézo">
+          <h3>Club Rézo</h3>
+          <p>Club Rézo fédère la communauté étudiante autour des médias, de la communication et des événements : podcasts, journaux, webzines et animations sur le campus.</p>
+        </div>
+      
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="testimonials-section">
+    <h2>💬 Témoignages Étudiants</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="quote">"Efrei m'a offert bien plus qu'une formation technique. C'est ici que j'ai trouvé ma passion pour la cybersécurité et rencontré des mentors exceptionnels qui m'ont guidée."</div>
+        <div class="author">Marie Dupont</div>
+        <div class="role">Promotion 2023 - Spécialité Cybersécurité</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote">"Les projets en équipe et les clubs m'ont permis de développer des compétences humaines aussi importantes que techniques. Le campus est vraiment un lieu d'apprentissage global."</div>
+        <div class="author">Thomas Bernard</div>
+        <div class="role">Étudiant actuellement en 2e année</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote">"Après Efrei, j'ai été recruté immédiatement dans une startup de l'IA. La formation m'a donné tous les outils nécessaires pour réussir dans ce domaine compétitif."</div>
+        <div class="author">Alexandre Moreau</div>
+        <div class="role">Alumni 2022 - Actuellement chez TechInnovate</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote">"Ce qui m'a marqué, c'est la diversité des projets proposés et la liberté d'explorer différents domaines. Je suis parti en échange à l'étranger grâce au réseau Efrei."</div>
+        <div class="author">Sophie Laurent</div>
+        <div class="role">Étudiant actuellement en 3e année</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS ÉTUDIANTS -->
+  <section class="projects-section">
+    <h2>🏆 Projets Étudiants</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">🚀</div>
+        <div class="project-info">
+          <h3>Plateforme IoT Intelligente</h3>
+          <p>Système complet de gestion IoT avec apprentissage machine pour optimiser l'énergie dans les bâtiments.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">🎮</div>
+        <div class="project-info">
+          <h3>Moteur de Jeu 3D</h3>
+          <p>Engine graphique personnalisé développé à partir de zéro avec support de la physique avancée.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">🔐</div>
+        <div class="project-info">
+          <h3>Analyse de Malwares</h3>
+          <p>Outil d'analyse de sécurité capable de détecter et classifier les menaces émergentes.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">📊</div>
+        <div class="project-info">
+          <h3>Prédiction de Tendances</h3>
+          <p>Application de data science prédisant les tendances du marché avec une précision élevée.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">🤖</div>
+        <div class="project-info">
+          <h3>Assistant IA Conversationnel</h3>
+          <p>Chatbot intelligent basé sur les transformers pour support client et assistance générale.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">🌍</div>
+        <div class="project-info">
+          <h3>Plateforme Collaborative</h3>
+          <p>Application web full-stack facilitant la collaboration entre équipes distribuées internationalement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="col">
+        <img src="../img/Logo-Generique-1-251113123328.png" alt="Logo Efrei" style="height:48px;filter:brightness(0) invert(1);">
+        <p style="margin-top:12px;max-width:320px;">Département Informatique — Efrei. Grande école généraliste & numérique.</p>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <p>Adresse: 30-32 Avenue de la République, Villejuif</p>
+        <p>Email: <a href="mailto:contact@efrei.fr">contact@efrei.fr</a></p>
+        <p>Téléphone: +33 1 40 00 00 00</p>
+      </div>
+      <div class="col">
+        <h4>Liens rapides</h4>
+        <p><a href="index.html#formations">Formations</a></p>
+        <p><a href="#">Vie Étudiante & Campus</a></p>
+        <p><a href="#">Partenariats</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Département Informatique d'Efrei — Tous droits réservés.</div>
+  </footer>
+</body>
+</html>

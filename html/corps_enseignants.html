@@ -6,6 +6,7 @@
     <link href="../css/corps_enseignant.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../js/corps_enseignant.js"></script>
 </head>
 <body>
 
@@ -33,31 +34,19 @@
         </section>
 
         <section class="prof-slider">
-            <div class="prof-container">
-                <div class="card small">
-                    <img src="../img/prof/mohamed-hamidi-web.png" alt="Professeur">
-                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
-                </div>
-                <div class="card small">
-                    <img src="../img/prof/ziad-adem-directeur-études.jpg" alt="Professeur">
-                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
-                </div>
-                <div class="card large">
-                    <img src="../img/prof/Gabis-Asma-responsable.jpg" alt="Directrice">
-                    <p><strong>Responsable</strong><br>Département Informatique</p>
-                </div>
-                <div class="card small">
-                    <img src="../img/prof/cherifa-ben-khelil-java.png" alt="Professeur">
-                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
-                </div>
-                <div class="card small">
-                    <img src="../img/prof/professeur-Prog_web.jpeg" alt="Professeur">
-                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
-                </div>
+            <div class="prof-container" id="slider-prof">
+                <div class="card"><img src="../img/prof/mohamed-hamidi-web.png" alt="Prof"><p><strong>Mohamed Hamidi</strong>Enseignant en informatique/ Programmation web</p></div>
+                <div class="card"><img src="../img/prof/ziad-adem-directeur-études.jpg" alt="Prof"><p><strong>Ziad Adem</strong> Enseignant-chercheur en Data/ IA & Directeur des études</p></div>
+                <div class="card"><img src="../img/prof/Gabis-Asma-responsable.jpg" alt="Prof"><p><strong>Asma Gabis</strong> Enseignante-chercheuse en informatique & Responsable du département informatique</p></div>
+                <div class="card"><img src="../img/prof/cherifa-ben-khelil-java.png" alt="Prof"><p><strong>Cherifa Ben Khelil</strong> Enseignante chercheuse en informatique/ Programmation orientée objet en java</p></div>
+                <div class="card"><img src="../img/prof/dina-informatique-electronique.png" alt="Prof"><p><strong>Dina Serhal Fakih </strong> Enseignante informatique & électronique</p></div>
+                
             </div>
+            
             <div class="slider-nav"> 
-                <button class="bouton"> < </button>
-                <button class="bouton"> > </button>
+                <button class="bouton" onclick="moveLeft()"> < </button>
+                <button class="bouton" onclick="moveRight()"> > </button>
+            </div>
         </section>
 
         <section class="section-recherche">

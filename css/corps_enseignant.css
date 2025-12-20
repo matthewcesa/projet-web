@@ -1,0 +1,114 @@
+body {
+    background: radial-gradient(circle, #0A1A3A, #020611);
+    color: white;
+    font-family: 'Montserrat', sans-serif, Black italic;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.introduction {
+    display: flex;
+    padding:30px;
+    gap: 50px;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif, Black italic;
+   
+}
+
+.intro-texte h1 { font-weight: 800; font-size: 2.5rem; margin-bottom: 20px; }
+.intro-texte p { font-weight: 300; line-height: 1.6; }
+.rounded-img { border-radius: 25px; width: 400px; margin-left: 70px;}
+
+.prof-slider {
+    background: radial-gradient(circle,#3FA4FF ,#0A1A3A );
+    padding-top: 40px ;
+    padding-bottom: 40px ;
+    text-align: center;
+}
+
+.prof-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,170,255,0.3);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card img { border-radius: 5px; margin-bottom: 10px; width: 100px;; }
+.card p { font-size: 0.7rem; font-weight: 300; }
+.card.large { transform: scale(1.1); background: rgba(0,170,255,0.1); }
+
+.slider-nav { margin-top: 20px; font-weight: 700; cursor: pointer; }
+.bouton{
+    color: white;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);         
+    -webkit-backdrop-filter: blur(10px);  
+    border-radius: 100px;
+}
+.section-recherche {
+    display: flex;
+    padding: 60px 10%;
+    gap: 40px;
+    align-items: center;
+}
+
+#research-lab-img {
+    border-radius: 55px;
+    height: 350px;
+    width:450px;
+}
+
+.lab-text h2 { font-weight: 800; font-size: 1.8rem; font-style: italic; }
+.lab-text p { font-weight: 300; font-size: 1rem; }
+
+.recherche-axes { padding: 40px 10%; }
+.recherche-axes h2 { font-weight: 800; text-transform: uppercase; font-size: 1.5rem; }
+.recherche-axes .subtitle { font-weight: 700; margin-bottom: 30px; }
+.axis { margin-bottom: 15px; font-weight: 300; }
+.axis strong { font-weight: 800; }
+
+
+.projects-section { padding: 60px 10%; }
+.projects-intro { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+.projects-intro h2 { font-weight: 800; font-size: 2rem; max-width: 400px; }
+.projects-intro p { font-weight: 300; max-width: 400px; text-align: right; }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.project-card:hover{
+    transform: translateY(-5px);
+    background-color: #1a2335;
+
+}
+
+.project-card {
+    background: #121826;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.project-card h3 { font-weight: 800; font-size: 1rem; margin-bottom: 20px; }
+.project-card p { font-weight: 300; font-size: 0.85rem; line-height: 1.4; }
+
+.plus {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.plus a{
+    color: white;
+    text-decoration: none;
+}

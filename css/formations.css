@@ -1,0 +1,172 @@
+
+body {
+    background: radial-gradient(circle, #0A1A3A, #020611);
+    color: white;
+    font-family: 'Montserrat', sans-serif, Black italic;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.introduction{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.citation {
+   
+    display: inline-block;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+}
+
+.citation h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.citation span {
+    font-style: italic;
+    color: #e0e0e0;
+    font-size: 40px;
+}
+
+.intro-texte {
+    font-family: 'Montserrat', sans-serif, Black italic;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 30px;
+}
+.explication {
+    display: flex;
+    justify-content: center;
+    padding: 20px
+}
+
+
+.explication-content {
+    display: flex;
+    padding-top: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 40px;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.explication-img {
+    width: 450px;
+    height: 300px;
+    border-radius: 25px;
+    
+}
+
+.explication-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.explication-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.explication-text li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.programme-intro {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.card {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.card-img {
+    border-radius: 12px;
+    width: 300px;
+    height: 200px;
+}
+
+#div-orange{
+    padding-left: 150px;
+}
+.boutons {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bleu {
+    background: radial-gradient(circle, #3FA4FF, #0A1A3A);
+}
+
+.orange {
+    background: radial-gradient(circle, #5F5A1B 0%, #55230A 100%);
+}
+
+.purple{
+    background: radial-gradient(circle, #90004D , #170420 );
+}
+
+.boutons-bleu {
+    background: linear-gradient(90deg,#FBFBFB,#2B71B6);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.boutons-bleu a{
+    text-decoration: none;
+    color: black;
+}
+.boutons-bleu option {
+    text-align: center;
+}
+
+.boutons-orange {
+    background: linear-gradient(90deg,#FFFFFF,#5C4A16);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: #3a1c05;
+    font-weight: bold;;
+}
+
+.boutons-violet {
+   background: linear-gradient(90deg,#F4F4F4,#860149);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: #3d0a44;
+    font-weight: bold;
+}
+
+/* Mobile Responsive 
+@media (max-width: 768px) {
+    .explication-content, .card-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-img, .explication-img {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+    */

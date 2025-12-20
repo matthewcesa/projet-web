@@ -2,48 +2,108 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations</title>
+    <title>EFREI - Corps Enseignant et Recherche</title>
+    <link href="../css/corps_enseignant.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header name = "header">
-        <a href="https://www.efrei.fr">
-                <img alt="image alt text" src="GreenIT.jpg" height="200" width="400">
-            </a>
-            <nav>
-                <a href="../html/formations.html">Formations</a>
-                <a href="./GreenITSiteWeb.html">Enseignants</a>
-                <a href="./QuizGreenIT.html">Contact</a>
-                <a href="./QuizGreenIT.html">À Propos</a>
-            </nav>
+
+    <header>
+        <img src="../img/efrei-logo.png" alt="EFREi" id = "efrei-logo"> <a href="#"></a>
+        <nav>
+            <ul>
+                <li><a href="../html/formations.html">Formations</a></li>
+                <li><a href="#">Campus</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-        <h1>Corps Enseignants</h1>
-        <p>Le corps enseignant de l’Efrei se distingue par son expertise et sa pédagogie moderne. Passionnés et proches de leurs étudiants, les professeurs rendent les concepts techniques accessibles et concrets. Grâce à leur lien étroit avec le monde professionnel, ils offrent une formation actuelle, exigeante et tournée vers les enjeux technologiques de demain.</p>
-        <img src="../img/corps-enseignant.jpg">
-    </section>
-    <section name = "carrousel-enseignants">
-        <ul class = "card-list"></ul>
-            <li class ="card-automates">
-                <img src = "../img/prof/professeur_automates.jpeg">
-            </li>
-            <li class ="card-proba">
-                <img src = "../img/prof/professeur_proba.jpeg">
-            </li>
-            <li class ="card-recherche-ope">
-                <img src = "../img/prof/professeur_recherche_operationnelle.webp">
-            </li>
-            <li class ="card-theorie">
-                <img src = "../img/prof/professeur_théorie_des_orgas.jpeg">
-            </li>
-            <li class ="card-prog-web">
-                <img src = "../img/prof/professeur-Prog_web.jpeg">
-            </li>
-    </section>
-    <footer>
-            <p>©️2025 -- Cesa - Chemli - Zhang --</p>
-            <p>Tous droits réservés.</p>
-            <a href="efrei.fr">En savoir plus ?</a>
-    </footer>
+
+    <main>
+        <section class="introduction">
+            <div class="intro-texte">
+                <h1>Le corps enseignant</h1>
+                <p>Le corps enseignant de l'Efrei se distingue par son expertise et sa pédagogie moderne. Passionnés et proches de leurs étudiants, les professeurs rendent les concepts techniques accessibles et concrets. Grâce à leur lien étroit avec le monde professionnel, ils offrent une formation actuelle, exigeante et tournée vers les enjeux technologiques de demain.</p>
+            </div>
+            <div>
+                <img src="../img/corps-enseignant.jpg" alt="Réunion professeurs" class="rounded-img">
+            </div>
+        </section>
+
+        <section class="prof-slider">
+            <div class="prof-container">
+                <div class="card small">
+                    <img src="../img/prof/mohamed-hamidi-web.png" alt="Professeur">
+                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
+                </div>
+                <div class="card small">
+                    <img src="../img/prof/ziad-adem-directeur-études.jpg" alt="Professeur">
+                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
+                </div>
+                <div class="card large">
+                    <img src="../img/prof/Gabis-Asma-responsable.jpg" alt="Directrice">
+                    <p><strong>Responsable</strong><br>Département Informatique</p>
+                </div>
+                <div class="card small">
+                    <img src="../img/prof/cherifa-ben-khelil-java.png" alt="Professeur">
+                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
+                </div>
+                <div class="card small">
+                    <img src="../img/prof/professeur-Prog_web.jpeg" alt="Professeur">
+                    <p><strong>Nom Prénom</strong><br>Enseignant-Chercheur</p>
+                </div>
+            </div>
+            <div class="slider-nav"> 
+                <button class="bouton"> < </button>
+                <button class="bouton"> > </button>
+        </section>
+
+        <section class="section-recherche">
+            <div>
+                <img src="../img/logo-efrei-research-lab.png" alt="EFREI Research Lab" id ="research-lab-img">
+            </div>
+            <div class="lab-text">
+                <h1>Notre corps professoral transcende la simple transmission du savoir.</h1>
+                <p>Leur engagement dans la recherche fondamentale et appliquée garantit à nos étudiants un accès privilégié et direct aux sources mêmes de l'innovation.</p>
+            </div>
+        </section>
+
+        <section class="recherche-axes">
+            <h1>Nos axes de recherche</h1>
+            <p class="subtitle">Innover au service de la science et de la société</p>
+            
+            <div class="axis"><strong>Data & IA</strong> – Comprendre, prédire et créer grâce à l'intelligence artificielle.</div>
+            <div class="axis"><strong>Sécurité, Résilience & Confiance numérique</strong> – Concilier innovation et cybersécurité.</div>
+            <div class="axis"><strong>Réseaux de communication</strong> – Construire l'internet du futur, de la 5G à la 6G.</div>
+            <div class="axis"><strong>Systèmes embarqués intelligents</strong> – Donner vie aux objets connectés.</div>
+        </section>
+
+        <section class="projects-section">
+            <div class="projects-intro">
+                <h2>Projets qui façonnent notre futur</h2>
+                <p>Découvrez les projets de recherche de l'Efrei Research Lab, alliant innovation, éthique et impact sociétal.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>ANR - STREAMédia (2025-2029)</h3>
+                    <p>STREAMédia développe un modèle d'IA multimodal pour analyser les genres des vidéos politiques issues de la télévision et des plateformes numériques.</p>
+                </div>
+                <div class="project-card">
+                    <h3>PHC-Cèdre - CryptHO - Santé (2025-2027)</h3>
+                    <p>CryptHO-Santé conçoit des solutions de cryptographie homomorphe légère pour sécuriser les données médicales dans des systèmes de santé intelligents.</p>
+                </div>
+                <div class="project-card">
+                    <h3>STIC - AMSUD - idNext (2025-2027)</h3>
+                    <p>idNext crée un cadre d'identité numérique décentralisée pour les systèmes de transport intelligents basé sur la blockchain et l'edge computing.</p>
+                </div>
+            </div>
+            
+            <div class="plus"><a href="https://www.efrei.fr/recherche-et-faculte/">En savoir plus ?</a></div>
+        </section>
+    </main>
+
 </body>
 </html>

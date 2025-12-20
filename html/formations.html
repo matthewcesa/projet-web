@@ -2,121 +2,94 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations</title>
+    <title>EFREI - Formations</title>
+    <link rel="stylesheet" href="../css/formations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-    <header name = "header">
-        <a href="https://www.efrei.fr">
-                <img alt="image alt text" src="GreenIT.jpg" height="200" width="400">
-            </a>
-            <nav>
-                <a href="../html/formations.html">Formations</a>
-                <a href="../html/corps_enseignants.html">Enseignants</a>
-                <a href="./QuizGreenIT.html">Contact</a>
-                <a href="./QuizGreenIT.html">À Propos</a>
-            </nav>
+    <header>
+        <img src="../img/efrei-logo.png" alt="EFREi" id = "efrei-logo"> <a href="#"></a>
+        <nav>
+            <ul>
+                <li><a href="../html/formations.html">Formations</a></li>
+                <li><a href="#">Campus</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-        <h1>“N’oubliez pas pour réussir à l’EFREI, c’est Travailler, Bosser, Taffer - Frédéric Meunier</h1>
-        <p> L'Excellence au Service du Numérique et de l'Innovation
-Le cycle de formations de l'EFREI, du Post-Bac au niveau Ingénieur/Mastère (Bac+5), a pour vocation de former des experts du numérique et des professionnels responsables, capables de diriger la transformation technologique.
+    <main>
+        <section class="introduction">
+            <div class="citation">
+                <h1> <span>“N’oubliez pas pour réussir à l’EFREI, c’est travailler, bosser, taffer”</span> <i>- Frédéric Meunier</i></h1>
+            </div>
+            <p class="intro-texte">
+                L'Excellence au Service du Numérique et de l'Innovation. <br>
+                Le cycle de formations de <strong>l’EFREI</strong>, du Post-Bac au (Bac+5), a pour vocation de former des <strong>experts du numérique</strong> et <strong>des professionnels responsables</strong>, capables de diriger la transformation technologique.
+            </p>
+        </section>
 
-Notre pédagogie est construite autour de trois objectifs fondamentaux :
+        <section class="explication">
+            <div class="explication-content">
+                <img class="explication-img" src="../img/travailler-taffer.jpg" alt="Étudiants EFREI" >
+                <div class="explication-text">
+                    <h2>Notre pédagogie repose sur trois piliers fondamentaux :</h2>
+                    <ul>
+                        <li><strong>Expertise Technique :</strong> Maîtrise du socle fondamental et expertise de pointe (IA, Cybersécurité, Cloud, Data Science) pour concevoir des solutions performantes.</li>
+                        <li><strong>Gestion et Leadership :</strong> Acquisition de la posture managériale pour piloter des projets complexes (Agile/Scrum) et intégrer les enjeux éthiques.</li>
+                        <li><strong>Innovation et Valeur :</strong> Cultiver l'esprit entrepreneurial pour transformer les idées en solutions concrètes et durables.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-Expertise Technique de Pointe : Maîtriser le socle fondamental (développement, systèmes, data) et développer une expertise de pointe en IA, Cybersécurité, Cloud, et Data Science, pour concevoir des solutions performantes.
+        <div class="programme-intro">
+            <h2>Préparez vous au monde de l'entreprise <br> Choisissez la formation qui vous convient</h2>
+        </div>
 
- Gestion de Projet et Leadership : Acquérir la posture managériale pour piloter des projets complexes (méthodes Agile/Scrum), coordonner des équipes techniques et intégrer les enjeux éthiques et stratégiques.
+        <section class="sections bleu">
+            <div class="card">
+                <h4>Programme Grandes Écoles</h4>
+                <p>Choisissez parmi nos filières et spécialités pour construire votre parcours d'ingénieurs.</p>
+                <div class="boutons">
+                    <button class="boutons-bleu">Prépas Intégrés </button>
+                    <button class="boutons-bleu"> <a href="cycle_ingenieur.html">Cycle Ingénieur</a> </button>
+                    <select class="boutons-bleu"onChange="window.location.href = this.value">
+                        <option value="">Majeures de spécialisation</option>
+                        <option value="majeure_cyber.html">Fillière sécuritré & réseaux</a></option>
+                    </select>
+                </div>
+            </div>
+            <img src="../img/formation-PGE.jpg" alt="PGE" class="card-img">
+        </section>
+        <section class="sections orange">
+            <img src="../img/formation-PTN.jpg" alt="PTN" class="card-img">
+            <div class="card">
+                <div class="boutons" id = "div-orange">
+                <h4>Programme Technologies et Numériques</h4>
+                <p>Découvrez nos formations pour construire un parcours qui vous ressemble.</p>
+                    <button class="boutons-orange">BTS</button>
+                    <button class="boutons-orange">Bachelors / Licences</button>
+                    <button class="boutons-orange">Mastères</button>
+                </div>
+            </div>
+            </section>
 
-            Innovation et Création de Valeur : Cultiver l'esprit entrepreneurial en transformant les idées en solutions concrètes et durables, que ce soit par la création de produit ou la R&D.</p>
-    </section>
+        <section class="sections purple">
+            <div class="card">
+                <h4>Programme Digital et management</h4>
+                <p>Devenez expert en communication digitale, marketing ou UX design.</p>
+                <div class="boutons">
+                    <button class="boutons-violet">BTS</button>
+                    <button class="boutons-violet">Bachelors / Licences</button>
+                    <button class="boutons-violet">Master / Mastères</button>
+                </div>
+            </div>
+            <img src="../img/formation-PDM.jpg" alt="Digital" class="card-img">
+        </section>
+    </main>
 
-    <h3> Préparez vous au monde de l’entreprise </h3>
-    <h3>Choisissez la formation qui vous convient</h3>
-
-    <section name = "PGE"> 
-        <img src="../img/formation-PGE.jpg" >
-        <p>Programma Grandes Écoles
-
-Choisissez parmi nos fillières et spécialités pour construire votre parcours d’ingénieurs
-
-        </p>
-        <button class="dropdown-Prepas">
-           Prépas Intégrées
-        </button> 
-        <button class="dropdown-ingenieur">
-           Cycle ingénieur
-        </button> 
-
-        <button class="dropdown-majeures">
-           Majeures de spécialisation
-        </button> 
-        <ul class="dropdown-majeures-content">
-            <li><a href="#profil">Fillière Data Science</a></li>
-            <li><a href="#parametre">Fillière Information Technology</a></li>
-            <li><a href="#deconnexion">Fillière Sécurité & Réseaux</a></li>
-            <li><a href="#profil">Fillière Systèmes embarqués></li>
-            <li><a href="#parametre">Fillière en apprentissage</a></li>
-        </ul>
-    </section>
-    <section name = "PTN"> 
-        <p>Programme Technologies et Numériques 
-
-        Découvrez nos formations pour construire un parcours  qui vous ressemble</p>
-        <img src="../img/formation-PTN.jpg">
-        <button class="dropdown-bts-PTN">
-           BTS
-        </button> 
-        <ul class="dropdown-bts-PTN-content">
-            <li><a href="#profil">SIO</a></li>
-        </ul>
-        <button class="dropdown-bachelor-PTN">
-           Bachelors/ Licences
-        </button> 
-        <ul class="dropdown-bachelor-PTN-content">
-            <li><a href="#profil">Bachelor Développeur Web & IA</a></li>
-            <li><a href="#profil">Bachelor Cybersécurité & réseaux (Grade de Licence)</a></li>
-        </ul>
-        <button class="dropdown-master-PTN">
-           Mastères
-        </button> 
-        <ul class="dropdown-master-PTN-content">
-            <li><a href="#profil">Mastère Dev. manager full stack​</a></li>
-            <li><a href="#profil">Mastère Data engineering & IA</a></li>
-            <li><a href="#profil">Mastère Cybersécurité</a></li>
-        </ul>
-    </section>
-    <section name = "PDM"> 
-        <p>Programma Digital et management
-        Devenez expert en communication digitale, marketing ou UX design</p>
-        <img src="../img/formation-PDM.jpg">
-        <button class="dropdown-bts-PDM">
-           BTS
-        </button> 
-        <ul class="dropdown-bts-PTN-content">
-            <li><a href="#profil">Communication</a></li>
-        </ul>
-        <button class="dropdown-bachelor-PDM">
-           Bachelors/ Licences
-        </button> 
-        <ul class="dropdown-bachelor-PDM-content">
-            <li><a href="#profil">Bachelor Marketing digital & communication</a></li>
-            <li><a href="#profil">Bachelor International Communication & Technology</a></li>
-        </ul>
-        <button class="dropdown-master-PDM">
-           Master/ Mastères
-        </button> 
-        <ul class="dropdown-bachelor-PDM-content">
-            <li><a href="#profil">Mastère UX Design</a></li>
-            <li><a href="#profil">Mastère Communication & stratégies digitales</a></li>
-        </ul>
-    </section>
-
-    <footer>
-            <p>©️2025 -- Cesa - Chemli - Zhang --</p>
-            <p>Tous droits réservés.</p>
-            <a href="efrei.fr">En savoir plus ?</a>
-    </footer>
 </body>
 </html>

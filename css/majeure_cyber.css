@@ -1,0 +1,94 @@
+
+
+body {
+    background: radial-gradient(circle, #0A1A3A, #020611);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.introduction {
+    padding: 60px 10%;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-titre h1 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.intro-text p {
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.rounded-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.explciation {
+    padding: 20px 10%;
+    max-width: 850px;
+}
+
+.explciation p {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.explciation strong {
+    font-weight: 700;
+}
+
+.explication-section {
+    padding: 60px 10% 40px;
+    text-align: center;
+}
+
+.explication-section h3 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+
+.explication-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.explication-card {
+    background-color: #121826;
+    padding: 40px 20px;
+    border-radius: 15px;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    transition: transform 0.3s ease;
+}
+.explication-card:hover {
+    transform: translateY(-5px);
+    background-color: #1a2335;
+}
+.alternance{
+    margin: 40px;
+}
+
+

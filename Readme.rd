@@ -1,5 +1,6 @@
 Projet de Programmation Web - EFREI
 
+Github : https://github.com/matthewcesa/projet-web
 
 
 -----  Notre Équipe ----- 
@@ -39,7 +40,7 @@ Readme.rd (le document actuel)
 
 
 -----  Instructions de lancement ----- 
-Le code final se trpuve dans le main de notre github
+Le code final se trpuve dans le main de notre github -> le lien vers notre github : https://github.com/matthewcesa/projet-web
 Ouvrez le dossier racine projet-web.
 Lancez le fichier index.html (situé dans le dossier racine ou dans /html selon votre configuration) via un navigateur web.
 

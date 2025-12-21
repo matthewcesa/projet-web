@@ -39,6 +39,7 @@ Readme.rd (le document actuel)
 
 
 -----  Instructions de lancement ----- 
+Le code final se trpuve dans le main de notre github
 Ouvrez le dossier racine projet-web.
 Lancez le fichier index.html (situé dans le dossier racine ou dans /html selon votre configuration) via un navigateur web.
 

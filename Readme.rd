@@ -46,5 +46,5 @@ Lancez le fichier index.html (situé dans le dossier racine ou dans /html selon 
 
 -----  Informations supplémentaires ----- 
 La navigation détaillée et la description des travaux sont accessibles directement sur la page "À propos" du site.
-
+De plus, la maquette et le code réél/le site ont de très légères différences en termes de couleurs par exemple, les différences sont minimes.
 

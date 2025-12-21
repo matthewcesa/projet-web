@@ -1,17 +1,17 @@
 :root {
-    /* Couleurs EFREI inspirées du Figma */
-    --color-primary: #007bff; /* Bleu plus clair pour les accents */
+   
+    --color-primary: #007bff; 
     --color-text-light: #ffffff;
     --color-text-secondary: #aaaaaa;
     --color-background-dark: #070D18;
-    --color-card-blue: #1A3459; /* Bleu foncé de la carte formation */
-    --color-partner-box: #0E182A; /* Fond des logos/box sombres */
+    --color-card-blue: #1A3459; 
+    --color-partner-box: #0E182A; 
     --color-border: #15223A;
     --color-hover-blue: #0A1B33;
-    --gradient-purple: linear-gradient(135deg, #4A00E0, #8E2DE2); /* Pour la carte Partenaire */
+    --gradient-purple: linear-gradient(135deg, #4A00E0, #8E2DE2); 
 }
 
-/* Général et Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -41,7 +41,7 @@ a:hover {
     color: var(--color-primary);
 }
 
-/* Header */
+
 header {
     background-color: var(--color-background-dark);
     padding: 15px 0;
@@ -57,7 +57,7 @@ header {
 .logo {
     font-size: 1.8em;
     font-weight: 700;
-    color: var(--color-primary); /* Simuler la couleur du logo EFREI */
+    color: var(--color-primary); 
 }
 
 nav a {
@@ -71,10 +71,10 @@ nav a.active {
     border-bottom: 2px solid var(--color-primary);
 }
 
-/* Header hero with large background image */
+
 .site-header {
     position: relative;
-    background-image: url('header.jpg'); /* Save the attached image as header.jpg in project root */
+    background-image: url('header.jpg'); 
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -83,7 +83,7 @@ nav a.active {
     flex-direction: column;
     justify-content: flex-start;
     color: var(--color-text-light);
-    border-bottom: none; /* hero replaces border */
+    border-bottom: none; 
 }
 
 .site-header::before {
@@ -240,6 +240,11 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
 }
+.site-header{
+    background-image: url('../img/header.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
 
 .logo-box {
     background-color: var(--color-partner-box);
@@ -262,7 +267,6 @@ main {
     transform: translateY(-4px);
 }
 
-/* Section Secteurs d'Activité */
 .activity-sectors {
     margin-bottom: 60px;
 }
@@ -411,7 +415,7 @@ footer {
     color: var(--color-primary);
 }
 
-/* Media Queries pour le Responsive Design */
+
 @media (max-width: 992px) {
     .partner-card .text-content {
         flex-direction: column;
@@ -422,7 +426,7 @@ footer {
         margin-bottom: 15px;
     }
     .partner-card .image-placeholder {
-        display: none; /* Cache l'image sur petit écran pour gagner de la place */
+        display: none; 
     }
 }
 
@@ -457,7 +461,7 @@ footer {
     }
 }
 
-/* Partner photos gallery */
+
 .partner-photos {
     margin-top: 30px;
 }
@@ -484,20 +488,19 @@ footer {
     height: 100%;
     max-width: 100%;
     object-fit: contain;
-    filter: brightness(1.06); /* Pour que les logos ressortent bien sur ton fond sombre */
+    filter: brightness(1.06); 
     display: block;
 }
 
-/* On s'assure que le lien prend toute la place de la case */
 a.logo-box {
     display: flex;
     text-decoration: none;
 }
 .contact-photo {
-  width: 200px;         /* largeur affichée */
-  height: 200px;        /* hauteur affichée */
-  object-fit: cover;    /* recadrage centré si l'image n'est pas carrée */
-  border-radius: 8px;   /* coins arrondis */
+  width: 200px;         
+  height: 200px;        
+  object-fit: cover;    
+  border-radius: 8px;   
   display: block;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }

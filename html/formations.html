@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/formations.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/formations.js"></script>
 </head>
 <body>
     <header>
@@ -55,10 +56,10 @@
                 <p>Choisissez parmi nos filières et spécialités pour construire votre parcours d'ingénieurs.</p>
                 <div class="boutons">
                     <button class="boutons-bleu">Prépas Intégrés </button>
-                    <button class="boutons-bleu"> <a href="cycle_ingenieur.html">Cycle Ingénieur</a> </button>
-                    <select class="boutons-bleu"onChange="window.location.href = this.value">
+                    <button class="boutons-bleu" onclick="onClick()">Cycle Ingénieur</button>
+                    <select class="boutons-bleu" onChange="onChange(this)">
                         <option value="">Majeures de spécialisation</option>
-                        <option value="majeure_cyber.html">Fillière sécuritré & réseaux</a></option>
+                        <option value="majeure_cyber.html">Fillière sécuritré & réseaux </option>
                     </select>
                 </div>
             </div>

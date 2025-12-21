@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>  Efrei – Département Informatique </title>
-  <link rel="stylesheet" href="../css/index.css" />
-  <script src="index.js"></script>
+  <title>Département Informatique – Efrei</title>
+  <link rel="stylesheet" href="../css/accueil.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="../js/script.js" defer></script>
 </head>
+
 <body>
   <header>
     <div class="logo-container">
@@ -15,71 +17,81 @@
       </a>
     </div>
     <nav>
-      <a href="#formations">Formations</a>
-      <a href="#enseignants">Corps Enseignant & Recherche</a>
-      <a href="vie-etudiante.html">Vie Étudiante & Campus</a>
+      <a href="formations.html">Formations</a>
+      <a href="corps_enseignants.html">Corps Enseignant & Recherche</a>
+      <a href="vie-etudiante.html">Vie étudiante</a>
       <a href="vie-etudiante.html#partnerships">Partenariats & Professionnalisation</a>
-      <a href="#contact">Contact & Admissions</a>
+      <a href="contact.html">Contact & Admissions</a>
+      <a href="contact.html">À propos</a>
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-text">
-      <h2>Façonner les ingénieurs et experts<br>du numérique de demain</h2>
+      <h2>Grande École<br> généraliste & <br>numérique</h2>
+      <h3>Former les ingénieurs et experts du numérique de demain</h3>
       <p>Rejoignez un cursus d'excellence en Informatique offrant spécialisations en cybersécurité, IA, ingénierie logicielle et bien d'autres domaines innovants.</p>
+      
+      
 
       <div class="cta">
+        <a href="formations.html">
         <button class="primary">Explorer les formations</button>
-        <button class="secondary">Demander info</button>
+       
+        </a>
       </div>
     </div>
 
-    <div class="hero-img"></div>
-  </section>
-
-  <!-- CARROUSEL -->
-  <div class="carousel">
-    <div class="carousel-slide active">📸 Campus de Villejuif - Espace moderne et inspirant</div>
-    <div class="carousel-slide">🔬 Laboratoires informatiques équipés des dernières technologies</div>
-    <div class="carousel-slide">👥 Étudiants en action - Projets et collaborations</div>
-    <div class="carousel-slide">🏆 Événements et conférences technologiques</div>
-    <div class="carousel-nav">
-      <span class="carousel-dot active" onclick="currentSlide(0)"></span>
-      <span class="carousel-dot" onclick="currentSlide(1)"></span>
-      <span class="carousel-dot" onclick="currentSlide(2)"></span>
-      <span class="carousel-dot" onclick="currentSlide(3)"></span>
-    </div>
-  </div>
-
-  <section class="stats">
-    <div>
-      <h3>+2 500</h3>
-      <p>Étudiants</p>
-    </div>
-    <div>
-      <h3>30+</h3>
-      <p>Spécialisations</p>
-    </div>
-    <div>
-      <h3>98%</h3>
-      <p>d’insertion professionnelle</p>
+    <div class="hero-img">
+      <div class="hero-img-carousel">
+        <div class="hero-slide active">
+          <img src="../img/accueil/campus_1.jpg" alt="Campus Efrei Villejuif - Bâtiment moderne et innovant">
+        </div>
+        <div class="hero-slide">
+          <img src="../img/accueil/campus.png" alt="Campus de Villejuif - Espace moderne et inspirant">
+        </div>
+        <div class="hero-slide">
+          <img src="../img/vie_etudiante/innovation_lab.jpg" alt="Innovation Lab">
+        </div>
+        <div class="hero-slide">
+          <img src="../img/accueil/etu_en_action.jpg" alt="Étudiants en action">
+        </div>
+        <div class="hero-slide">
+          <img src="../img/accueil/cybernight.jpg" alt="CyberNight — Soirée étudiante">
+        </div>
+      </div>
     </div>
   </section>
-
+  
+  
+  <!-- À PROPOS D'EFREI -->
   <section class="about">
     <h2>À propos d'Efrei</h2>
     <p>L'Efrei, Grande École généraliste et numérique depuis 90 ans, entre dans une nouvelle ère, celle d'un pôle majeur du numérique en Île-de-France et en région bordelaise. Ce projet ambitieux s'ancre dans une collaboration solide avec l'Université Paris Panthéon-Assas, dont l'Efrei fait partie depuis 2022 en tant qu'établissement composante.</p>
+
+    <div class="video-fallback">
+        <a class="fallback-poster" href="https://www.youtube.com/watch?v=vF6k1ht1D8s" target="_blank" rel="noopener noreferrer">
+          <img src="../img/accueil/video_miniature.jpg" alt="Ouvrir la vidéo sur YouTube">
+          <div class="fallback-play">▶ Regarder sur YouTube</div>
+        </a>
+      </div>
+    
+  
   </section>
+
+  
+
 
   <!-- ACTUALITÉS ET ÉVÉNEMENTS -->
   <section class="news">
-    <h2>🗓️ Actualités & Événements</h2>
+    <h2>Actualités & Événements</h2>
     <div class="news-grid">
       <div class="news-card">
         <div class="date">📅 15 Janvier 2025</div>
         <h3>Journées Portes Ouvertes</h3>
         <p>Découvrez nos formations, rencontrez nos étudiants et enseignants, visitez nos laboratoires modernes et l'architecture innovante du campus.</p>
-        <a href="#">En savoir plus →</a>
+        <a href="https://www.youtube.com/watch?v=0j5Bmd-zNzo" target="_blank">En savoir plus →</a>
       </div>
       <div class="news-card">
         <div class="date">📅 22 Janvier 2025</div>
@@ -101,25 +113,71 @@
       </div>
     </div>
   </section>
-    <h2 id="formations">Formations phares</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Cybersécurité</h3>
-        <p>Défense, analyse, protection avancée des systèmes d'information.</p>
+  
+  <div class="section-separator" aria-hidden="true"></div>
+
+    <!-- EFREI en chiffres -->
+    <section class="stats">
+      <h2>L'EFREI en chiffres</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">1ère</div>
+          <div class="stat-desc">école privée EESPIG</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-value">+2 500</div>
+          <div class="stat-desc">Étudiants</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-value">30+</div>
+          <div class="stat-desc">Spécialisations</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-value">98%</div>
+          <div class="stat-desc">d’insertion professionnelle</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-value">93</div>
+          <div class="stat-desc">Universités partenaires</div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Ingénierie Logicielle</h3>
-        <p>Architecture, développement, gestion de projets technologiques.</p>
-      </div>
-      <div class="card">
-        <h3>Intelligence Artificielle</h3>
-        <p>Machine learning, vision, modèles avancés et applications IA.</p>
+    </section>
+  
+  
+
+  <!-- SECTION: Trouvez votre formation -->
+  <section class="find-formation">
+    <div class="find-inner">
+      <div class="find-content">
+        <h2>Trouvez votre formation</h2>
+        <p class="find-desc">Trouvez la formation qui correspond à votre profil et à vos envies !</p>
+        <button class="primary" onclick="window.location.href='formations.html'">Voir les formations</button>
       </div>
     </div>
   </section>
 
-  <div id="contact" style="padding:40px 0 80px;"></div>
+  <!-- SECTION CONTACT -->
+  <section class="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <h2>Contactez-nous</h2>
+        <p>Des questions sur nos programmes ou le processus d'admission ? Notre équipe est là pour vous aider.</p>
+        <button class="primary" onclick="window.location.href='contact.html'">Demander des informations</button>
+      </div>
+      <div class="contact-image" aria-hidden="true">
+        <img src="../img/accueil/etudiants_souriants.jpg" alt="Étudiants souriants">
+      </div>
+    </div>
+  </section>
 
+  
+
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="col">
@@ -128,41 +186,47 @@
       </div>
       <div class="col">
         <h4>Contact</h4>
-        <p>Adresse: 30-32 Avenue de la République, Villejuif</p>
-        <p>Email: <a href="mailto:contact@efrei.fr">contact@efrei.fr</a></p>
-        <p>Téléphone: +33 1 40 00 00 00</p>
+        <p>30-32 Avenue de la République, 94800 </p>
+        <p>Villejuif, France</p>
+        <p><a href="mailto:contact@efrei.fr">contact@efrei.fr</a></p>
+        
+        <p>+33 188 289 001</p>
       </div>
       <div class="col">
         <h4>Liens rapides</h4>
         <p><a href="#formations">Formations</a></p>
-        <p><a href="vie-etudiante.html">Vie Étudiante & Campus</a></p>
-        <p><a href="vie-etudiante.html#partnerships">Partenariats</a></p>
+        <p><a href="corps_enseignants.html">Corps enseignants & Recherche</a></p>
+        <p><a href="vie-etudiante.html">Vie Étudiante</a></p>
+        <p><a href="vie-etudiante.html#partnerships">Partenariats & Professionnalisation</a></p>
+        <p><a href="vie-etudiante.html#partnerships">Contact & Admission</a></p>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2025 Département Informatique d'Efrei — Tous droits réservés.</div>
+    
+    <div class="footer-bottom">
+      
+      <p>&copy; 2025 Département Informatique d'Efrei — Tous droits réservés.</p>
+      
+      <a href="https://www.efrei.fr/mentions-legales/" target="_blank" rel="noopener noreferrer">Mentions légales</a>
+      <a href="https://www.efrei.fr/donnees-personnelles/" target="_blank" rel="noopener noreferrer">Données personnelles</a>
+      <a href="https://www.efrei.fr/cookies/" target="_blank" rel="noopener noreferrer">Cookies</a>
+
+      <!-- Liens vers les réseaux sociaux -->
+      <ul class="social-links">
+        <li>
+          <a href="https://www.instagram.com/efrei_paris/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li><a href="https://www.linkedin.com/school/efrei/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i></a></li>
+
+        <li><a href="https://www.facebook.com/efrei.paris" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
-  <script>
-    let currentSlideIndex = 0;
-    
-    function currentSlide(n) {
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dots = document.querySelectorAll('.carousel-dot');
-      
-      slides.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
-      
-      slides[n].classList.add('active');
-      dots[n].classList.add('active');
-      currentSlideIndex = n;
-    }
-    
-    // Auto-rotation du carrousel
-    setInterval(() => {
-      const slides = document.querySelectorAll('.carousel-slide');
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      currentSlide(currentSlideIndex);
-    }, 1000);
-  </script>
 </body>
 </html>

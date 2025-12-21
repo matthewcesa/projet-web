@@ -1,0 +1,98 @@
+body {
+    background: radial-gradient(circle, #0A1A3A, #020611);
+    color: white;
+    font-family: 'Montserrat', sans-serif, Black italic;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.introduction {
+    background-color: #020611;
+    color: white;
+    padding: 60px 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Titre avec la barre bleue qui passe derrière le texte */
+.apropos {
+    font-size: 3.5rem;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.apropos::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 15px; /* Ajuste la hauteur de la barre bleue */
+    width: 100%;
+    height: 12px;
+    background-color: #3FA4FF;
+    z-index: -1; /* Place la barre derrière le texte */
+}
+
+.introduction-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.top-illustration {
+    width: 420px;
+    border-radius: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    max-width: 500px;
+    font-weight: 300;
+}
+
+/* Lignes des membres */
+.member-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+/* Aligne la carte à droite pour les lignes paires */
+.member-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* La carte de profil sombre */
+.carte-personne {
+    background-color: #121826;
+    padding: 25px;
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.carte-personne img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.carte-nom strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.carte-nom span {
+    font-size: 0.8rem;
+}
+
+/* Le texte à côté de la carte */
+.description-box {
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+}

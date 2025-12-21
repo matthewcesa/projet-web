@@ -6,21 +6,26 @@
         <link rel="stylesheet" href="../css/a_propos.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <img src="../img/efrei-logo.png" alt="EFREi" id = "efrei-logo"> <a href="#"></a>
-            <nav>
-                <ul>
-                    <li><a href="../html/formations.html">Formations</a></li>
-                    <li><a href="#">Campus</a></li>
-                    <li><a href="#">Admissions</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
+        <div class="logo-container">
+            <a href="index.html" aria-label="Accueil">
+                <img src="../img/Logo-Generique-1-251113123328.png" alt="Logo Efrei">
+            </a>
+        </div>
+        <nav>
+            <a href="formations.html">Formations</a>
+            <a href="corps_enseignants.html">Corps Enseignant & Recherche</a>
+            <a href="vie-etudiante.html">Vie étudiante</a>
+            <a href="Partenaire.html">Partenariats & Professionnalisation</a>
+            <a href="contact.html">Contact & Admissions</a>
+            <a href="a_propos.html">À propos</a>
+        </nav>
+    </header>
+        <main class="mains">
             <section class="introduction">
     <div class="introduction-content">
         <div>
@@ -66,14 +71,61 @@ Concernant la section consacrée au corps enseignant, mon objectif principal ét
             </div>
         </div>
         <div class="description-box">
-            <p>Pour ma part, j’ai été chargé de la conception et du développement de la page Entreprises partenaires, ainsi que de la page Nous contacter. La page partenaires avait pour objectif de valoriser les collaborations de l’EFREI avec le monde professionnel. J’y ai mis en place une structure claire et lisible permettant d’afficher un grand nombre d’entreprises sous forme de grille de logos, tout en garantissant une navigation intuitive grâce à des liens directs vers les sites officiels de chaque partenaire.
-
-La principale difficulté rencontrée a été d’assurer un affichage homogène des logos, malgré leurs formats et dimensions très variés, tout en conservant un rendu professionnel et responsive sur tous les supports. Cela m’a amené à travailler finement sur l’organisation du HTML et l’exploitation du CSS existant afin de respecter la charte graphique du site.
-
-En parallèle, j’ai développé la page Nous contacter, pensée comme un point de contact clair et accessible pour les utilisateurs. J’ai veillé à structurer les informations de manière logique et à faciliter l’interaction avec les visiteurs. L’ensemble de mon travail a été réalisé dans le respect des bonnes pratiques du développement web, notamment en matière de lisibilité du code, de responsive design et de cohérence avec le reste du site.</p>
+            <p>Pour ma part, j’ai été chargé de la conception et du développement de la page Entreprises partenaires, ainsi que de la page Nous contacter. La page partenaires avait pour objectif de valoriser les collaborations de l’EFREI avec le monde professionnel. J’y ai mis en place une structure claire et lisible permettant d’afficher un grand nombre d’entreprises sous forme de grille de logos, tout en garantissant une navigation intuitive grâce à des liens directs vers les sites officiels de chaque partenaire.  La principale difficulté rencontrée a été d’assurer un affichage homogène des logos, malgré leurs formats et dimensions très variés, tout en conservant un rendu professionnel et responsive sur tous les supports. Cela m’a amené à travailler finement sur l’organisation du HTML et l’exploitation du CSS existant afin de respecter la charte graphique du site.  En parallèle, j’ai développé la page Nous contacter, pensée comme un point de contact clair et accessible pour les utilisateurs. J’ai veillé à structurer les informations de manière logique et à faciliter l’interaction avec les visiteurs. L’ensemble de mon travail a été réalisé dans le respect des bonnes pratiques du développement web, notamment en matière de lisibilité du code, de responsive design et de cohérence avec le reste du site. De plus, j’ai développé une page DevenirPartenaire qui est accessible via un bouton “Devenez Partenaire” sur la page Partenaire.
+            </p>
         </div>
     </div>
 </section>
-        </main>
+    </main>
+    <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="col">
+        <img src="../img/Logo-Generique-1-251113123328.png" alt="Logo Efrei" style="height:48px;filter:brightness(0) invert(1);">
+        <p style="margin-top:12px;max-width:320px;">Département Informatique — Efrei. Grande école généraliste & numérique.</p>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <p>30-32 Avenue de la République, 94800 </p>
+        <p>Villejuif, France</p>
+        <p><a href="mailto:contact@efrei.fr">contact@efrei.fr</a></p>
+        
+        <p>+33 188 289 001</p>
+      </div>
+      <div class="col">
+        <h4>Liens rapides</h4>
+        <p><a href="#formations">Formations</a></p>
+        <p><a href="corps_enseignants.html">Corps enseignants & Recherche</a></p>
+        <p><a href="vie-etudiante.html">Vie Étudiante</a></p>
+        <p><a href="vie-etudiante.html#partnerships">Partenariats & Professionnalisation</a></p>
+        <p><a href="vie-etudiante.html#partnerships">Contact & Admission</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      
+      <p>&copy; 2025 Département Informatique d'Efrei — Tous droits réservés.</p>
+      
+      <a href="https://www.efrei.fr/mentions-legales/" target="_blank" rel="noopener noreferrer">Mentions légales</a>
+      <a href="https://www.efrei.fr/donnees-personnelles/" target="_blank" rel="noopener noreferrer">Données personnelles</a>
+      <a href="https://www.efrei.fr/cookies/" target="_blank" rel="noopener noreferrer">Cookies</a>
+
+      <!-- Liens vers les réseaux sociaux -->
+      <ul class="social-links">
+        <li>
+          <a href="https://www.instagram.com/efrei_paris/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li><a href="https://www.linkedin.com/school/efrei/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i></a></li>
+
+        <li><a href="https://www.facebook.com/efrei.paris" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
     </body>
 </html>

@@ -1,9 +1,12 @@
 body {
     background: radial-gradient(circle, #0A1A3A, #020611);
     color: white;
-    font-family: 'Montserrat', sans-serif, Black italic;
+     font-family: 'Segoe UI', sans-serif;
+}
+.main{
     margin-left: 30px;
     margin-right: 30px;
+    font-family: 'Montserrat', sans-serif, Black italic;
 }
 .introduction {
     background-color: #020611;

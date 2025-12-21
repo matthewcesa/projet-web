@@ -2,69 +2,9 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    
+    background: radial-gradient(circle, #0A1A3A, #020611);
     color: white;
     overflow-x: hidden;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo-container img {
-    height: 80px;
-    width: auto;
-    filter: brightness(0) invert(1);
-}
-.logo-container a {
-    display: inline-block;
-}
-
-header h1 {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-header .subtitle {
-    font-size: 12px;
-    opacity: 0.7;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-
-nav a {
-    color: white;
-    margin-left: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #5bbdff;
-}
-
-.primary {
-    background: linear-gradient(135deg, #3fa4ff, #176bff);
-    color: white;
-    box-shadow: 0 0 20px rgba(50, 150, 255, 0.5);
 }
 
 

@@ -1,12 +1,16 @@
-
 body {
     background: radial-gradient(circle, #0A1A3A, #020611);
     color: white;
-    font-family: 'Montserrat', sans-serif, Black italic;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    
 }
 
+.main-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Montserrat', sans-serif, Black italic;
+}
+  
 .introduction{
     text-align: center;
     padding: 50px 20px;
@@ -158,15 +162,3 @@ body {
     font-weight: bold;
 }
 
-/* Mobile Responsive 
-@media (max-width: 768px) {
-    .explication-content, .card-section {
-        flex-direction: column;
-        text-align: center;
-    }
-    .card-img, .explication-img {
-        width: 100%;
-        margin-top: 20px;
-    }
-}
-    */

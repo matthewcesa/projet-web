@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../js/corps_enseignant.js"></script>
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
     
     <header>
-        <img src="../img/efrei-logo.png" alt="EFREi" id = "efrei-logo"> <a href="#"></a>
-        <nav>
-            <ul>
-                <li><a href="../html/formations.html">Formations</a></li>
-                <li><a href="#">Campus</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="logo-container">
+      <a href="index.html" aria-label="Accueil">
+        <img src="../img/Logo-Generique-1-251113123328.png" alt="Logo Efrei">
+      </a>
+    </div>
+    <nav>
+      <a href="formations.html">Formations</a>
+      <a href="corps_enseignants.html">Corps Enseignant & Recherche</a>
+      <a href="vie-etudiante.html">Vie étudiante</a>
+      <a href="Partenaire.html">Partenariats & Professionnalisation</a>
+      <a href="contact.html">Contact & Admissions</a>
+      <a href="a_propos.html">À propos</a>
+    </nav>
+  </header>
 
-    <main>
+    <main class ="main">
         <section class="introduction">
             <div class="intro-texte">
                 <h1>Le corps enseignant</h1>
@@ -93,6 +98,55 @@
             <div class="plus"><a href="https://www.efrei.fr/recherche-et-faculte/">En savoir plus ?</a></div>
         </section>
     </main>
+    <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="col">
+        <img src="../img/Logo-Generique-1-251113123328.png" alt="Logo Efrei" style="height:48px;filter:brightness(0) invert(1);">
+        <p style="margin-top:12px;max-width:320px;">Département Informatique — Efrei. Grande école généraliste & numérique.</p>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <p>30-32 Avenue de la République, 94800 </p>
+        <p>Villejuif, France</p>
+        <p><a href="mailto:contact@efrei.fr">contact@efrei.fr</a></p>
+        
+        <p>+33 188 289 001</p>
+      </div>
+      <div class="col">
+        <h4>Liens rapides</h4>
+        <p><a href="#formations">Formations</a></p>
+        <p><a href="corps_enseignants.html">Corps enseignants & Recherche</a></p>
+        <p><a href="vie-etudiante.html">Vie Étudiante</a></p>
+        <p><a href="vie-etudiante.html#partnerships">Partenariats & Professionnalisation</a></p>
+        <p><a href="vie-etudiante.html#partnerships">Contact & Admission</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      
+      <p>&copy; 2025 Département Informatique d'Efrei — Tous droits réservés.</p>
+      
+      <a href="https://www.efrei.fr/mentions-legales/" target="_blank" rel="noopener noreferrer">Mentions légales</a>
+      <a href="https://www.efrei.fr/donnees-personnelles/" target="_blank" rel="noopener noreferrer">Données personnelles</a>
+      <a href="https://www.efrei.fr/cookies/" target="_blank" rel="noopener noreferrer">Cookies</a>
 
+      <!-- Liens vers les réseaux sociaux -->
+      <ul class="social-links">
+        <li>
+          <a href="https://www.instagram.com/efrei_paris/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li><a href="https://www.linkedin.com/school/efrei/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i></a></li>
+
+        <li><a href="https://www.facebook.com/efrei.paris" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>

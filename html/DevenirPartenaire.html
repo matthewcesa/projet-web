@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Efrei - Devenir partenaire</title>
+  <link rel="stylesheet" href="../css/DevenirPartenaire.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Devenir partenaire</h1>
+    <p class="lead">Remplissez ce formulaire pour nous faire part de votre intérêt. Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+
+    <div class="card" aria-labelledby="formTitle">
+      <h2 id="formTitle" style="margin-top:0;font-size:18px">Formulaire Devenir Partenaire</h2>
+
+      <form id="partnerForm" novalidate>
+        <div>
+          <label for="civility">Civilité</label>
+          <select id="civility" name="civility">
+            <option value="">-</option><option>Madame</option><option>Monsieur</option><option>Autre</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="phonePrefix">Téléphone (indicatif)</label>
+          <select id="phonePrefix" class="small" aria-label="Indicatif">
+            <option value="+33">FR +33</option>
+            <option value="+32">BE +32</option>
+            <option value="+41">CH +41</option>
+            <option value="+44">UK +44</option>
+            <option value="+1">US +1</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="firstname">Prénom *</label>
+          <input id="firstname" name="firstname" type="text" required>
+          <div class="error" id="err-firstname" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="lastname">Nom *</label>
+          <input id="lastname" name="lastname" type="text" required>
+          <div class="error" id="err-lastname" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" required>
+          <div class="error" id="err-email" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="phone">Numéro de téléphone portable</label>
+          <input id="phone" name="phone" type="tel" placeholder="06 12 34 56 78">
+        </div>
+
+        <div class="full checkbox-inline" style="margin-top:6px;">
+          <input id="isParent" name="isParent" type="checkbox">
+          <label for="isParent" style="margin:0">Je suis parent</label>
+        </div>
+
+        <div>
+          <label for="level">Niveau d'études *</label>
+          <select id="level" name="level" required>
+            <option value="">-</option><option>Bac</option><option>Bac+2</option><option>Bac+3</option><option>Bac+5</option>
+          </select>
+          <div class="error" id="err-level" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="trainingType">Type de formation *</label>
+          <select id="trainingType" name="trainingType" required>
+            <option value="">-</option><option>Ingénieur</option><option>Master</option><option>Licence</option><option>Formation continue</option>
+          </select>
+          <div class="error" id="err-trainingType" aria-live="polite"></div>
+        </div>
+
+        <div class="full">
+          <label for="wantedProgram">Programme souhaité *</label>
+          <input id="wantedProgram" name="wantedProgram" type="text" required>
+          <div class="error" id="err-wantedProgram" aria-live="polite"></div>
+        </div>
+
+        <div class="full">
+          <label>Campus *</label>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <label class="checkbox-inline"><input type="checkbox" name="campus" value="Paris"> Paris</label>
+            <label class="checkbox-inline"><input type="checkbox" name="campus" value="Bordeaux"> Bordeaux</label>
+          </div>
+          <div class="error" id="err-campus" aria-live="polite"></div>
+        </div>
+
+        <div class="full">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Dites-nous en quelques lignes ce que vous souhaitez mettre en place avec notre école"></textarea>
+          <div class="error" id="err-message" aria-live="polite"></div>
+        </div>
+
+        <div class="full consent">
+          <p>Nous collectons et traitons vos données personnelles sur la base de votre consentement. Conformément au RGPD, vous disposez d'un droit d'accès, rectification, suppression, opposition et limitation. Pour exercer vos droits : <a href="mailto:dpo@exemple.fr">dpo@exemple.fr</a>.</p>
+        </div>
+
+        <div class="full">
+          <label class="checkbox-inline"><input id="consentMarketing" type="checkbox"> En cochant cette case, vous acceptez de recevoir des communications par e-mail et SMS.</label>
+        </div>
+
+        <div class="full" style="display:flex;gap:14px;align-items:center;">
+          <div class="recaptcha-sim" id="recaptchaSim" role="group" aria-label="reCAPTCHA simulé">
+            <div class="box" id="recaptchaBox">OK</div>
+            <div style="font-size:14px;color:var(--muted)">protection par reCAPTCHA (simulation)</div>
+          </div>
+          <div style="margin-left:auto" class="help">Cochez la case reCAPTCHA pour activer le bouton envoyer.</div>
+        </div>
+
+        <div class="full actions">
+          <button id="submitBtn" type="submit" disabled>Soumettre</button>
+          <button id="resetBtn" type="button" class="secondary">Réinitialiser</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const form = document.getElementById('partnerForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const resetBtn = document.getElementById('resetBtn');
+      const recaptchaBox = document.getElementById('recaptchaBox');
+      let recaptchaChecked = false;
+
+      function enableSubmitIfReady(){
+        const recOk = recaptchaChecked;
+        submitBtn.disabled = !recOk;
+      }
+
+      // Toggle fake recaptcha when clicking the box
+      document.getElementById('recaptchaSim').addEventListener('click', function(){
+        recaptchaChecked = !recaptchaChecked;
+        recaptchaBox.style.background = recaptchaChecked ? '#2b7cff' : '#eff6ff';
+        recaptchaBox.style.color = recaptchaChecked ? '#fff' : '#0b66ff';
+        enableSubmitIfReady();
+      });
+
+      function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+      function clearErrors(){
+        ['firstname','lastname','email','level','trainingType','wantedProgram','campus','message']
+          .forEach(id => {
+            const el = document.getElementById('err-' + id);
+            if(el) el.textContent = '';
+          });
+      }
+
+      function validate(){
+        clearErrors();
+        let ok = true;
+        const firstname = document.getElementById('firstname').value.trim();
+        const lastname = document.getElementById('lastname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const level = document.getElementById('level').value;
+        const trainingType = document.getElementById('trainingType').value;
+        const wantedProgram = document.getElementById('wantedProgram').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const campusChecked = Array.from(document.querySelectorAll('input[name="campus"]')).some(cb => cb.checked);
+
+        if(!firstname){ document.getElementById('err-firstname').textContent = 'Prénom requis.'; ok=false; }
+        if(!lastname){ document.getElementById('err-lastname').textContent = 'Nom requis.'; ok=false; }
+        if(!email || !isEmail(email)){ document.getElementById('err-email').textContent = 'Email invalide.'; ok=false; }
+        if(!level){ document.getElementById('err-level').textContent = 'Sélectionnez un niveau.'; ok=false; }
+        if(!trainingType){ document.getElementById('err-trainingType').textContent = 'Sélectionnez un type de formation.'; ok=false; }
+        if(!wantedProgram){ document.getElementById('err-wantedProgram').textContent = 'Indiquez un programme.'; ok=false; }
+        if(!campusChecked){ document.getElementById('err-campus').textContent = 'Sélectionnez au moins un campus.'; ok=false; }
+        if(!message){ document.getElementById('err-message').textContent = 'Merci d\'ajouter un message.'; ok=false; }
+
+        return ok;
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(!validate()) return;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi...';
+
+        const payload = new FormData(form);
+        // For demo we simulate an async send. Replace with fetch() to a server endpoint.
+        setTimeout(() => {
+          alert('Merci ! Votre demande a bien été envoyée.');
+          form.reset();
+          recaptchaChecked = false;
+          recaptchaBox.style.background = '#eff6ff';
+          recaptchaBox.style.color = '#0b66ff';
+          enableSubmitIfReady();
+          submitBtn.textContent = 'Soumettre';
+          submitBtn.disabled = true;
+        }, 900);
+      });
+
+      resetBtn.addEventListener('click', function(){
+        form.reset();
+        clearErrors();
+        recaptchaChecked = false;
+        recaptchaBox.style.background = '#eff6ff';
+        recaptchaBox.style.color = '#0b66ff';
+        enableSubmitIfReady();
+      });
+
+      // small accessibility: keyboard toggle recaptcha with Space/Enter when focused
+      document.getElementById('recaptchaSim').tabIndex = 0;
+      document.getElementById('recaptchaSim').addEventListener('keydown', function(e){
+        if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); this.click(); }
+      });
+
+      // enable submit if recaptcha already checked (initially false)
+      enableSubmitIfReady();
+    })();
+  </script>
+</body>
+</html>

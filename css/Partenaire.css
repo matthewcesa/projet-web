@@ -1,0 +1,506 @@
+:root {
+    /* Couleurs EFREI inspirées du Figma */
+    --color-primary: #007bff; /* Bleu plus clair pour les accents */
+    --color-text-light: #ffffff;
+    --color-text-secondary: #aaaaaa;
+    --color-background-dark: #070D18;
+    --color-card-blue: #1A3459; /* Bleu foncé de la carte formation */
+    --color-partner-box: #0E182A; /* Fond des logos/box sombres */
+    --color-border: #15223A;
+    --color-hover-blue: #0A1B33;
+    --gradient-purple: linear-gradient(135deg, #4A00E0, #8E2DE2); /* Pour la carte Partenaire */
+}
+
+/* Général et Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #0A1A3A, #020611);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* Header */
+header {
+    background-color: var(--color-background-dark);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-primary); /* Simuler la couleur du logo EFREI */
+}
+
+nav a {
+    margin-left: 25px;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+
+nav a.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* Header hero with large background image */
+.site-header {
+    position: relative;
+    background-image: url('header.jpg'); /* Save the attached image as header.jpg in project root */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--color-text-light);
+    border-bottom: none; /* hero replaces border */
+}
+
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55));
+    z-index: 0;
+}
+
+.site-header .container.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.site-header .logo { color: var(--color-text-light); font-weight:700; }
+
+.site-header nav a { color: rgba(255,255,255,0.95); margin-left: 20px; font-weight:500; }
+.site-header nav a.active { border-bottom: 2px solid rgba(255,255,255,0.6); color: var(--color-primary); }
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding: 40px 0 60px 0;
+    max-width: 900px;
+    margin-left: calc(5%);
+}
+
+.hero-text h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+    color: var(--color-text-light);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.95);
+}
+
+@media (max-width: 768px) {
+    .site-header { height: 45vh; min-height: 320px; }
+    .hero-text { margin-left: 5%; padding: 30px 0; }
+    .hero-text h1 { font-size: 1.6rem; }
+    .hero-text p { font-size: 1rem; }
+    .site-header nav a { margin-left: 12px; }
+}
+
+@media (max-width: 480px) {
+    .hero-text { text-align: center; margin-left: 0; padding: 20px; }
+    .site-header .container.header-content { padding: 12px; }
+    .hero-text h1 { font-size: 1.4rem; }
+}
+
+
+/* Main Content */
+main {
+    padding: 50px 0;
+}
+
+/* Section Titre */
+.hero-partner {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.hero-partner h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-partner p {
+    font-size: 1.1em;
+    color: var(--color-text-secondary);
+}
+
+/* Section Devenez Partenaire */
+.devenez-partenaire-section {
+    margin-bottom: 60px;
+}
+
+.partner-card {
+    display: flex;
+    background: var(--gradient-purple);
+    padding: 30px;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partner-card .image-placeholder {
+    width: 200px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-right: 30px;
+}
+
+.partner-card .text-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.partner-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+    flex-basis: 50%;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Bleu plus foncé */
+}
+
+/* Section Partenaires Stratégiques */
+.strategic-partners {
+    margin-bottom: 60px;
+}
+
+.strategic-partners h2, .activity-sectors h2, .professionnalisation-details h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 15px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.logo-box {
+    background-color: var(--color-partner-box);
+    padding: 14px 18px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    transition: background-color 0.3s, border-color 0.3s, transform 0.12s;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+}
+
+.logo-box:hover {
+    background-color: var(--color-hover-blue);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+/* Section Secteurs d'Activité */
+.activity-sectors {
+    margin-bottom: 60px;
+}
+
+.sectors-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sector-item {
+    text-align: center;
+    width: 120px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    background-color: var(--color-partner-box);
+    border: 2px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s;
+}
+
+.sector-item:hover .icon-circle {
+    border-color: var(--color-primary);
+}
+
+.sector-item.active .icon-circle {
+    border-color: var(--color-primary);
+    background-color: var(--color-hover-blue);
+}
+
+.sector-item p {
+    font-size: 0.9em;
+    color: var(--color-text-secondary);
+}
+
+.sector-item.active p {
+    color: var(--color-text-light);
+}
+
+
+/* Section Partenariats & Professionnalisation */
+.professionnalisation-details hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 40px 0;
+}
+
+.professionnalisation-details h2 {
+    border-bottom: none;
+}
+
+.details-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--color-partner-box);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.column h3 {
+    color: var(--color-primary);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.column p {
+    color: var(--color-text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.column ul li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    color: var(--color-text-secondary);
+    font-size: 0.9em;
+}
+
+.column ul li::before {
+    content: "•";
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.5em;
+}
+
+
+/* Footer */
+footer {
+    background-color: #000000; /* Plus foncé pour le bas de page */
+    padding: 20px 0;
+    font-size: 0.8em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .links a {
+    margin-right: 20px;
+    color: var(--color-text-secondary);
+}
+
+.footer-content .social-icons a {
+    margin-left: 15px;
+    color: var(--color-text-light);
+    border: 1px solid var(--color-text-secondary);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.footer-content .social-icons a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* Media Queries pour le Responsive Design */
+@media (max-width: 992px) {
+    .partner-card .text-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .partner-card p {
+        flex-basis: auto;
+        margin-bottom: 15px;
+    }
+    .partner-card .image-placeholder {
+        display: none; /* Cache l'image sur petit écran pour gagner de la place */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .details-columns {
+        flex-direction: column;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content .links a {
+        display: block;
+        margin: 5px 0;
+    }
+    .footer-content .social-icons {
+        margin-top: 15px;
+    }
+}
+
+/* Partner photos gallery */
+.partner-photos {
+    margin-top: 30px;
+}
+.partner-photos h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    align-items: center;
+}
+.photos-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    display: block;
+}
+.logo-box img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    filter: brightness(1.06); /* Pour que les logos ressortent bien sur ton fond sombre */
+    display: block;
+}
+
+/* On s'assure que le lien prend toute la place de la case */
+a.logo-box {
+    display: flex;
+    text-decoration: none;
+}
+.contact-photo {
+  width: 200px;         /* largeur affichée */
+  height: 200px;        /* hauteur affichée */
+  object-fit: cover;    /* recadrage centré si l'image n'est pas carrée */
+  border-radius: 8px;   /* coins arrondis */
+  display: block;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+@media (max-width: 768px) {
+  .contact-photo { width: 140px; height: 140px; }
+}

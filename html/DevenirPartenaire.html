@@ -15,14 +15,14 @@
 
       <form id="partnerForm" novalidate>
         <div>
-          <label for="civility">Civilité</label>
+          <label class ="label"for="civility">Civilité</label>
           <select id="civility" name="civility">
             <option value="">-</option><option>Madame</option><option>Monsieur</option><option>Autre</option>
           </select>
         </div>
 
         <div>
-          <label for="phonePrefix">Téléphone (indicatif)</label>
+          <label class ="label"for="phonePrefix">Téléphone (indicatif)</label>
           <select id="phonePrefix" class="small" aria-label="Indicatif">
             <option value="+33">FR +33</option>
             <option value="+32">BE +32</option>
@@ -33,35 +33,35 @@
         </div>
 
         <div>
-          <label for="firstname">Prénom *</label>
+          <label class ="label"for="firstname">Prénom *</label>
           <input id="firstname" name="firstname" type="text" required>
           <div class="error" id="err-firstname" aria-live="polite"></div>
         </div>
 
         <div>
-          <label for="lastname">Nom *</label>
+          <label class ="label"for="lastname">Nom *</label>
           <input id="lastname" name="lastname" type="text" required>
           <div class="error" id="err-lastname" aria-live="polite"></div>
         </div>
 
         <div>
-          <label for="email">E-mail *</label>
+          <label class ="label"for="email">E-mail *</label>
           <input id="email" name="email" type="email" required>
           <div class="error" id="err-email" aria-live="polite"></div>
         </div>
 
         <div>
-          <label for="phone">Numéro de téléphone portable</label>
+          <label class ="label"for="phone">Numéro de téléphone portable</label>
           <input id="phone" name="phone" type="tel" placeholder="06 12 34 56 78">
         </div>
 
         <div class="full checkbox-inline" style="margin-top:6px;">
           <input id="isParent" name="isParent" type="checkbox">
-          <label for="isParent" style="margin:0">Je suis parent</label>
+          <label class ="label"for="isParent" style="margin:0">Je suis parent</label>
         </div>
 
         <div>
-          <label for="level">Niveau d'études *</label>
+          <label class ="label"for="level">Niveau d'études *</label>
           <select id="level" name="level" required>
             <option value="">-</option><option>Bac</option><option>Bac+2</option><option>Bac+3</option><option>Bac+5</option>
           </select>
@@ -69,7 +69,7 @@
         </div>
 
         <div>
-          <label for="trainingType">Type de formation *</label>
+          <label class ="label"for="trainingType">Type de formation *</label>
           <select id="trainingType" name="trainingType" required>
             <option value="">-</option><option>Ingénieur</option><option>Master</option><option>Licence</option><option>Formation continue</option>
           </select>
@@ -77,7 +77,7 @@
         </div>
 
         <div class="full">
-          <label for="wantedProgram">Programme souhaité *</label>
+          <label class ="label"for="wantedProgram">Programme souhaité *</label>
           <input id="wantedProgram" name="wantedProgram" type="text" required>
           <div class="error" id="err-wantedProgram" aria-live="polite"></div>
         </div>
@@ -85,14 +85,14 @@
         <div class="full">
           <label>Campus *</label>
           <div style="display:flex;gap:16px;flex-wrap:wrap;">
-            <label class="checkbox-inline"><input type="checkbox" name="campus" value="Paris"> Paris</label>
-            <label class="checkbox-inline"><input type="checkbox" name="campus" value="Bordeaux"> Bordeaux</label>
+            <label class ="label"class="checkbox-inline"><input type="checkbox" name="campus" value="Paris"> Paris</label>
+            <label class ="label"class="checkbox-inline"><input type="checkbox" name="campus" value="Bordeaux"> Bordeaux</label>
           </div>
           <div class="error" id="err-campus" aria-live="polite"></div>
         </div>
 
         <div class="full">
-          <label for="message">Message *</label>
+          <label class ="label"for="message">Message *</label>
           <textarea id="message" name="message" required placeholder="Dites-nous en quelques lignes ce que vous souhaitez mettre en place avec notre école"></textarea>
           <div class="error" id="err-message" aria-live="polite"></div>
         </div>
@@ -102,7 +102,7 @@
         </div>
 
         <div class="full">
-          <label class="checkbox-inline"><input id="consentMarketing" type="checkbox"> En cochant cette case, vous acceptez de recevoir des communications par e-mail et SMS.</label>
+          <label class ="label"class="checkbox-inline"><input id="consentMarketing" type="checkbox"> En cochant cette case, vous acceptez de recevoir des communications par e-mail et SMS.</label>
         </div>
 
         <div class="full" style="display:flex;gap:14px;align-items:center;">

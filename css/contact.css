@@ -11,9 +11,20 @@
       --max-width:980px;
       color-scheme: dark;
     }
-    html,body{height:100%;margin:0;font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial; background:linear-gradient(180deg,#04121a 0%, #071923 100%); color:#e8eef2;}
-    .wrap{max-width:var(--max-width);margin:36px auto;padding:28px;}
-    h1{font-size:2.25rem;margin:0 0 12px 0;color:#fff}
+
+    
+body{
+  height:100%;
+  margin:0;
+  font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial; 
+  background: radial-gradient(circle, #0A1A3A, #020611);
+  color:#e8eef2;
+}
+.wrap{
+  max-width:var(--max-width);
+  margin:36px auto;padding:28px;
+}
+h1{font-size:2.25rem;margin:0 0 12px 0;color:#fff}
     p.lead{color:var(--muted);margin:0 0 18px 0}
     .grid{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}
     /* Left column (contacts) */

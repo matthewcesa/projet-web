@@ -6,7 +6,7 @@ body{
     height:100%;
     margin:0;
     font-family:Inter,Roboto,system-ui,Arial;
-    background: linear-gradient(180deg,#e9f1f8,#f6f8f9);color:#0c2230
+   background: radial-gradient(circle, #0A1A3A, #020611);
 }
 .wrap{
     max-width:var(--maxw);
@@ -17,14 +17,17 @@ body{
 h1{
     margin:0 0 12px;
     font-size:28px;
-    color:#0a2540
+    color:#4396e9
+}
+#formTitle{
+    color:#4396e9
 }
 p.lead{
     margin:0 0 20px;
-    color:var(--muted)
+    color:white;
 }
 .card{
-    background:var(--card);
+    background:radial-gradient(circle, #6d92da, #020611);;
     border-radius:var(--radius);
     box-shadow:0 6px 18px rgba(16,40,60,0.06);
     padding:22px;border:1px solid rgba(10,30,40,0.04)
@@ -33,6 +36,9 @@ form{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:18px;
+}
+.label{
+    color:white;
 }
 .full{
     grid-column:1/ -1;

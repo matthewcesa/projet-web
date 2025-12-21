@@ -247,7 +247,7 @@ main {
 }
 
 .logo-box {
-    background-color: var(--color-partner-box);
+    background-color: #3c5d81;
     padding: 14px 18px;
     height: 120px;
     display: flex;
@@ -258,11 +258,10 @@ main {
     transition: background-color 0.3s, border-color 0.3s, transform 0.12s;
     font-size: 0.9em;
     font-weight: 700;
-    color: var(--color-text-secondary);
 }
 
 .logo-box:hover {
-    background-color: var(--color-hover-blue);
+    background-color: #aaaaaa;
     border-color: var(--color-primary);
     transform: translateY(-4px);
 }

@@ -1,14 +1,14 @@
-Projet de Programmation Web - EFREI
+# Projet de Programmation Web - EFREI
 
 Github : https://github.com/matthewcesa/projet-web
 
 
------  Notre Équipe ----- 
+## Notre Équipe
 Le projet a été réalisé par le trinôme suivant : CESA Matthew-Frédérick, CHEMLI Hechmi, ZHANG David
 
 
 
------ Répartition des tâches -----
+## Répartition des tâches  
 CESA Matthew-Frédérick
     Formations : Conception de la page formations et des sous-pages (Cycle Ingénieur et Majeure de spécialisation - Filière Réseaux & Sécurité).
     Corps enseignant & Recherche : Mise en place de la présentation des enseignants et des axes de recherche.
@@ -26,7 +26,7 @@ ZHANG David
 
 
 
------ Structure du projet ----- 
+##  Structure du projet   
 Pour assurer le bon fonctionnement du site (liens, images et scripts), le projet doit être lancé à partir de la racine du dossier projet-web.
 L'arborescence est organisée comme suit :
 
@@ -39,14 +39,14 @@ Readme.rd (le document actuel)
 
 
 
------  Instructions de lancement ----- 
+##   Instructions de lancement   
 Le code final se trpuve dans le main de notre github -> le lien vers notre github : https://github.com/matthewcesa/projet-web
 Ouvrez le dossier racine projet-web.
 Lancez le fichier index.html (situé dans le dossier racine ou dans /html selon votre configuration) via un navigateur web.
 
 
 
------  Informations supplémentaires ----- 
+##   Informations supplémentaires   
 La navigation détaillée et la description des travaux sont accessibles directement sur la page "À propos" du site.
 De plus, la maquette et le code réél/le site ont de très légères différences en termes de couleurs par exemple, les différences sont minimes.
 

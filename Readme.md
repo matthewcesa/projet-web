@@ -30,12 +30,19 @@ ZHANG David
 Pour assurer le bon fonctionnement du site (liens, images et scripts), le projet doit être lancé à partir de la racine du dossier projet-web.
 L'arborescence est organisée comme suit :
 
-/html : Contient l'ensemble des pages du site.
-/css : Feuilles de style pour le design et la mise en page.
-/img : Ressources visuelles et logos.
-/js : Scripts pour l'interactivité (navigation, carrousel, etc.).
-Maquette_Projet.pdf : La maquette originale ayant servi de base à l'implémentation.
-Readme.rd (le document actuel)
+To ensure the website functions properly (links, images, and scripts), the project should be launched from the root of the projet-web folder. The directory structure is organized as follows:
+
+``` /html ```: Contains all the website pages.
+
+```/css ```: Stylesheets for design and layout.
+
+```/img ```: Visual assets and logos.
+
+```/js ```: Scripts for interactivity (navigation, carousel, etc.).
+
+```Maquette_Projet.pdf ```: The original mockup used as a basis for implementation.
+
+```README.md ```: This document.
 
 
 
